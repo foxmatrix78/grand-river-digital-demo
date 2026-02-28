@@ -263,7 +263,7 @@ function initContactForm() {
 
     setSubmitting(true);
 
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwvnzaby';
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnjbrllk';
 
     fetch(FORMSPREE_ENDPOINT, {
       method: 'POST',
