@@ -133,7 +133,7 @@ function initReveal() {
 
       io.unobserve(el);
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
 
   elements.forEach(el => io.observe(el));
 }
@@ -278,4 +278,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initFooterYear();
   initHeroVisuals();
+});
+
+/* ─── IMMEDIATE REVEAL on load ── */
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    qsa('.reveal').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('is-visible');
+      }
+    });
+  }, 50);
 });
