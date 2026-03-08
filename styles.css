@@ -1934,6 +1934,214 @@ button {
 }
 
 /* ═══════════════════════════════════════════════════
+   LIGHT SECTIONS — balance the dark-heavy layout
+   Rhythm: Dark hero → Light services → Dark HIW →
+           Light stats → Emerald CTA → Dark footer
+══════════════════════════════════════════════════ */
+
+.section-light {
+  background: #F9FAFB;
+}
+
+/* ── Typography overrides ── */
+.section-light .section-title  { color: #111827; }
+.section-light .section-sub    { color: #4B5563; }
+.section-light .eyebrow {
+  color: var(--accent-dark);
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.22);
+}
+
+/* ── Service cards on white ── */
+.section-light .service-card {
+  background: #FFFFFF;
+  border-color: #E5E7EB;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.section-light .service-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 0 0 var(--accent), 0 20px 60px rgba(16, 185, 129, 0.10);
+}
+.section-light .service-card__title { color: #111827; }
+.section-light .service-card__desc  { color: #6B7280; }
+.section-light .service-card__icon  {
+  background: rgba(16, 185, 129, 0.07);
+  border-color: rgba(16, 185, 129, 0.18);
+}
+
+/* ── Stat items on white ── */
+.section-light.stats-section {
+  border-top-color: #E5E7EB;
+  border-bottom-color: #E5E7EB;
+}
+.section-light .stats-grid { background: #F9FAFB; }
+.section-light .stat-item {
+  border-right-color: #E5E7EB;
+  border-bottom-color: #E5E7EB;
+}
+.section-light .stat-item__value { color: #111827; }
+.section-light .stat-item__title { color: #111827; }
+.section-light .stat-item__desc  { color: #9CA3AF; }
+.section-light .stat-item__icon  {
+  background: rgba(16, 185, 129, 0.07);
+  border-color: rgba(16, 185, 129, 0.18);
+}
+
+/* ── CTA Band — deep emerald accent (instead of plain navy) ── */
+.cta-band {
+  background: #022c22;
+}
+.cta-band::before {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, transparent 65%);
+}
+.cta-band::after {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.035) 1px, transparent 1px);
+}
+
+/* ── Demo cards (Work page) on white ── */
+.section-light .demo-card {
+  background: #FFFFFF;
+  border-color: #E5E7EB;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.section-light .demo-card:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10), 0 0 0 1px rgba(16, 185, 129, 0.2);
+}
+.section-light .demo-card__name { color: #111827; }
+.section-light .demo-card__desc { color: #6B7280; }
+.section-light .demo-card__cta {
+  background: #F3F4F6;
+  border-color: #E5E7EB;
+  color: #111827;
+}
+.section-light .demo-card__cta:hover {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border-color: transparent;
+  color: #fff;
+}
+.section-light .demo-card__live { color: #6B7280; }
+
+/* ── Founder & value cards (About page) on white ── */
+.section-light .founder-card {
+  background: #FFFFFF;
+  border-color: #E5E7EB;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.section-light .founder-card:hover {
+  border-color: #D1D5DB;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+.section-light .founder-card__name { color: #111827; }
+.section-light .founder-card__bio  { color: #6B7280; }
+.section-light .founder-card__creds li { color: #6B7280; }
+.section-light .founder-card__tags span {
+  color: #374151;
+  background: #F3F4F6;
+  border-color: #E5E7EB;
+}
+.section-light .value-card {
+  background: #FFFFFF;
+  border-color: #E5E7EB;
+}
+.section-light .value-card:hover { border-color: #D1D5DB; }
+.section-light .value-card__title { color: #111827; }
+.section-light .value-card__desc  { color: #6B7280; }
+.section-light .value-card__icon  {
+  background: rgba(16, 185, 129, 0.07);
+  border-color: rgba(16, 185, 129, 0.18);
+}
+
+/* ── Contact section on white ── */
+.section-light .contact-info__title { color: #111827; }
+.section-light .contact-info__sub   { color: #6B7280; }
+.section-light .contact-reassurance { color: #6B7280; }
+.section-light .founders-note {
+  background: #FFFFFF;
+  border-color: #E5E7EB;
+}
+.section-light .founders-note__text { color: #6B7280; }
+.section-light .founders-note__text strong { color: #111827; }
+.section-light .contact-form-wrap {
+  background: #FFFFFF;
+  border-color: #E5E7EB;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+.section-light .form-label  { color: #374151; }
+.section-light .form-input,
+.section-light .form-select,
+.section-light .form-textarea {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+  color: #111827;
+}
+.section-light .form-input::placeholder,
+.section-light .form-textarea::placeholder { color: #9CA3AF; }
+.section-light .form-input:focus,
+.section-light .form-select:focus,
+.section-light .form-textarea:focus {
+  border-color: var(--accent);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+.section-light .form-note { color: #9CA3AF; }
+.section-light .form-select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-color: #F9FAFB;
+}
+
+/* ── Services detail sections — light alternating ── */
+.svc-full-section:nth-child(odd)  { background: #F9FAFB; }
+.svc-full-section:nth-child(even) { background: #F1F5F9; border-top-color: #E5E7EB; border-bottom-color: #E5E7EB; }
+.svc-full-section .svc-full-layout__title { color: #111827; }
+.svc-full-section .svc-full-layout__desc  { color: #6B7280; }
+.svc-full-section .svc-feature-item__title { color: #111827; }
+.svc-full-section .svc-feature-item__desc  { color: #6B7280; }
+.svc-full-section .svc-feature-item__icon {
+  background: rgba(16, 185, 129, 0.07);
+  border-color: rgba(16, 185, 129, 0.18);
+}
+/* Keep the browser-mockup visual card dark for contrast effect */
+.svc-full-section .svc-full-layout__visual {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Services overview cards on light bg */
+.section-light .svc-detail-card {
+  background: #FFFFFF;
+  border-color: #E5E7EB;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.section-light .svc-detail-card:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+.section-light .svc-detail-card__title { color: #111827; }
+.section-light .svc-detail-card__desc  { color: #6B7280; }
+.section-light .svc-detail-card__feature { color: #6B7280; }
+.section-light .svc-detail-card__price  { color: #9CA3AF; border-top-color: #E5E7EB; }
+.section-light .svc-detail-card__icon {
+  background: rgba(16, 185, 129, 0.07);
+  border-color: rgba(16, 185, 129, 0.18);
+}
+
+/* Origin section (about) — light ── */
+.origin-section {
+  background: #F1F5F9;
+  border-top-color: #E5E7EB;
+  border-bottom-color: #E5E7EB;
+}
+.origin-text { color: #4B5563 !important; }
+.origin-section .section-title { color: #111827; }
+
+/* ── How We Work — keep dark but step-ring uses correct bg ── */
+/* No change needed; hiw-section already uses --surface-2 correctly */
+
+/* ═══════════════════════════════════════════════════
    PRINT
 ══════════════════════════════════════════════════ */
 @media print {
